@@ -245,6 +245,24 @@ h1{
     padding: 20px;
     border: 2px solid var(--bordr-color);
     border-radius: 15px;
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from{
+        filter: blur(3px);
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to{
+        filter: none;
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .skillItm i{
@@ -258,20 +276,75 @@ h1{
 
 /* projects */
 
+#prj{
+    width: 30%;
+}
+
+#prj div{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid var(--bordr-color);
+    border-radius: 10px;
+
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgb(0 0 0 / 41%) 0%, rgba(255, 255, 255, 0.05) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(78, 78, 78, 0.445);
+        border-color: #a1a1a154;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
 iframe{
-    margin: 50px 20px 0;
-    width: 94%;
-    height: 75vh;
+    width: 100%;
     background: #f5f5f5;
     border: none;
-
+    border-radius:12px;
 }
+
+#prj div h3{
+    padding: 14px 0 12px;
+    font-size: 24px;
+}
+
+#prj div p{
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+#prj div .tools{
+    padding: 10px;
+    border: 1px solid var(--bordr-color);
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
 
 /* contact us */
 #cntct{
     padding: 80px 0;
 }
-form{
+    form{
     padding: 50px 20px 50px;
     display: flex;
     flex-direction: column;
@@ -305,6 +378,122 @@ input{
 
 textarea{
     border: none;
-    width: 410px;
+    width: 217px;
     height: 174px;
+}
+
+/* Mobile responsive 320px */
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    *{
+        height: auto;
+    }
+
+    aside{
+        width: 96%;
+        position: relative;
+    }
+
+    main {
+        padding: 10px 20px;
+        width: 100%;
+        scroll-behavior: smooth;
+    }
+
+    #hm {
+    padding: 20px 0;
+    height: auto;
+    }
+
+    h1{
+    font-size: 24px;
+    line-height: normal;
+    padding: 30px 0 20px;
+    }
+    
+    #about{
+        height: auto;
+    }
+
+    #Education{
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    #Education h2 {
+        padding: 30px 0 0px;
+        font-size: 32px;
+    }
+
+    #date {
+        line-height: 40px;
+    }
+
+    .skillItm {
+        width: 40%;
+    }
+
+    .skillItm i {
+        font-size: 50px;
+    }
+
+    #prj{
+        width: 100%;
+    }
+}
+
+
+/* Tablet responsive */
+@media screen and (min-width: 683px) and (max-width: 1024px){
+
+    aside{
+        width: 46%;
+        position: fixed;
+        height: 97vh;
+    }
+    
+    main{
+        width: 48%;
+    }
+
+    form{
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 784px) and (max-width: 1024px){
+
+    aside{
+        width: 41%;
+        position: fixed;
+        height: 97vh;
+    }
+    
+    main{
+        width: 56%;
+    }
+}
+
+@media screen and (min-width: 830px) and (max-width: 1024px){
+
+    aside{
+        width: 39%;
+        position: fixed;
+        height: 97vh;
+    }
+    
+    main{
+        width: 56%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1044px){
+    aside{
+        width: 37%;
+        position: fixed;
+        height: 97vh;
+    }
+    
+    main{
+        width: 63%;
+    }
 }
