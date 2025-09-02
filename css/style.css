@@ -70,7 +70,6 @@ aside{
 #aSideIcn a{
     border: 1px solid var(--bordr-color);
     border-radius: 50%;
-    padding: 17px 20px;
     transition: background-color 0.6s ease;
 }
 
@@ -83,6 +82,16 @@ aside{
     font-size: 22px;
     transition: transform 1s ease, color 0.5s ease;
     background-color: #f5f5f500;
+    padding: 16px 17px;
+}
+
+#ltrr i {
+    font-size: 21px !important;
+    padding: 16.5px 17px !important;
+}
+
+#lnkd i {
+    padding: 16px 17.5px !important;
 }
 
 #aSideIcn a:hover i {
@@ -450,7 +459,7 @@ textarea{
     }
 
     aside{
-        width: 96%;
+        width: 94%;
         position: relative;
     }
 
