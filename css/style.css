@@ -280,7 +280,7 @@ h1{
     width: 30%;
 }
 
-#prj div{
+#prj .prjCrd{
     margin: 20px 0;
     padding: 20px;
     border: 1px solid var(--bordr-color);
@@ -314,10 +314,8 @@ h1{
     }
 }
 
-iframe{
+#prj img{
     width: 100%;
-    background: #f5f5f5;
-    border: none;
     border-radius:12px;
 }
 
@@ -331,12 +329,75 @@ iframe{
     margin-bottom: 20px;
 }
 
+.prjItms{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+}
+
 #prj div .tools{
     padding: 10px;
     border: 1px solid var(--bordr-color);
     border-radius: 10px;
     margin-right: 5px;
     font-size: 14px;
+}
+
+.prjCrd .btnn{
+    background-color:transparent;
+    border-radius: 10px;
+    border: 2px solid var(--bordr-color);
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 1s ease;
+    transition: color 0.5s ease;
+    overflow: hidden;
+    margin-top: 8px;
+    
+
+    &:hover{
+        background-color:#f5f5f575;
+        color: var(--main-color);
+        transition: background-color 1s ease;
+        transition: color 0.5s ease;
+    }
+
+    /* animation */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -108%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover{
+        color: #ffff;
+        background: linear-gradient(135deg, #2e2e30 0%, #222425da 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(17, 24, 39, 0.3);
+
+        &::before {
+            left: 100%;
+        }
+    }
 }
 
 
@@ -439,6 +500,10 @@ textarea{
     #prj{
         width: 100%;
     }
+
+    form{
+        flex-wrap: nowrap;
+    }
 }
 
 
@@ -453,11 +518,11 @@ textarea{
     
     main{
         width: 48%;
-    }
-
-    form{
+    }form{
         flex-wrap: nowrap;
     }
+
+    
 }
 
 @media screen and (min-width: 784px) and (max-width: 1024px){
@@ -494,6 +559,10 @@ textarea{
     }
     
     main{
-        width: 63%;
+        width: 59%;
+    }
+
+    #hm {
+    padding: 22px 0;
     }
 }
