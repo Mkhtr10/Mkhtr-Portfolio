@@ -5,6 +5,7 @@
     background-color: var(--main-color);
     color: var(--fnt-color);
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
