@@ -250,10 +250,6 @@ h1{
 }
 
 /* skills */
-#skills{
-    height: 100vh;
-}
-
 #allskills{
     padding:50px 0;
     display: flex;
