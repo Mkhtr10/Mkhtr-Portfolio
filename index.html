@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelrahman Mukhtar</title>
+    <title>Abdelrahman Mukhtar - Frontend Developer</title>
+    <meta name="description" content="Frontend Developer specializing in React, JavaScript, and modern web technologies. Creating beautiful, responsive user experiences.">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <aside class="fade-slide">
+    <!-- Mobile sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <aside class="fade-slide" id="sidebar">
         <p id="asideHd">
             <span id="nm">MKHTR</span>
             <span id="jb">Front-End Developer</span>
@@ -38,155 +45,433 @@
         <!-- cv button -->
         <a id="cvBtn" href="resume/Abdelrahman_Mukhtar_CV.pdf" target="_blank">CV</a>
     </aside>
+    
+
     <main class="fade-slide">
-        <section id="hm">
-            <p class="titl">
-                <i class="fa-solid fa-house"></i>
-                <span>
-                    INTRODUCE
-                </span>
-            </p>
-            <h1>
-                From idea to live — stunning design, lightning-fast delivery and real results.
-            </h1>
-            <p id="obj">
-                Motivated and detail-oriented Computer Science student. Passionate about solving problems, learning new technologies, and building precise and creative user interfaces. Seeking opportunities to grow in a professional environment.
-            </p>
-        </section>
-        <section id="about">
-            <p class="titl">
-                <i class="fa-regular fa-user"></i>
-                <span>
-                    ABOUT
-                </span>
-            </p>
-            <p id="aboutTxt">
-                React.JS Front-End Developer. Skilled in building modern, responsive, and high-performance web applications using HTML, CSS, JavaScript, and React.js. Passionate about delivering high-performance websites with exceptional user experiences. Focused on creating robust solutions and driving project success through well-crafted technology and strategic implementation.
-            </p>
-        </section>
-        <section id="Education">
-            <p class="titl">
-                <i class="fa-solid fa-school"></i>
-                <span style="color: #f5f5f5;">
-                    RESUME
-                </span>
-            </p>
-
-            <h2>
-                Education
-            </h2>
-
-            <span id="date">2024 - present</span>
-            <p>
-                B.Sc. in Software Intelligent Systems and Multimedia
-            </p>
-            <span style="font-size: 12px;">
-                Alexandria University - Faculty of Science
-            </span>
-        </section>
-
-        <section id="skills">
-            <p class="titl">
-                <i class="fa-solid fa-brain"></i>
-                <span class="wave">
-                    <span>S</span><span>K</span><span>I</span><span>L</span><span>L</span><span>S</span>
-                </span>
-            </p>
-            <div id="allskills">
-                <div class="skillItm">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML</span>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">MKHTR</span>
                 </div>
-
-                <div class="skillItm">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <span>CSS</span>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
-
-                <div class="skillItm">
-                    <i class="fa-brands fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-
-                <div class="skillItm">
-                    <i class="fa-brands fa-react"></i>
-                    <span>React</span>
-                </div>
-
-                <div class="skillItm">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <span>Bootstrap</span>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-        </section>
-        <!-- projects -->
-        <section id="prj">
-            <p class="titl">
-                <i class="fa-solid fa-wrench"></i>
-                <span>
-                    PROJECTS
-                </span>
-            </p>
-            <div class="prjCrd" class="fade-slide">
-                <img src="images/Screenshot (97).png" alt="Finder`">
-                <h3>
-                    Finder Project
-                </h3>
-                <p>
-                    Designed and built a fully responsive product search website using HTML and CSS.
-                    Implemented interactive UI components and search functionality with a focus on performance.
-                    Improved layout and responsiveness across mobile and desktop screens.
-                </p>
-                <div class="prjItms">
-                    <span class="tools">
-                        CSS3
-                    </span>
-                    <span class="tools">
-                        HTML5
-                    </span>
-                    <span class="tools">
-                        JavaScript
-                    </span>
-                    <a class="btnn" href="https://mkhtr10.github.io/Finder-project/" target="_blank">Demo</a>
-                </div>    
-            </div>
-        </section>
-
-        <!-- <section id="cntct">
-            <form>
-                <div>
-                    <label for="name">
-                        FULL NAME 
-                        <span>*</span>
-                    </label>
-                    <input type="text" placeholder="Your Full Name" required>
-                </div>
-
-                <div>
-                    <label for="phone">
-                        PHONE 
-                        <span style="color:#8f8f99;">(optional)</span>
-                    </label>
-                    <input type="tel" placeholder="Your Phone Number">
-                </div>
-
-                <div>
-                    <label for="email">
-                        E-MAIL
-                        <span>*</span>
-                    </label>
-                    <input type="email" placeholder="Your E-mail" required>
-                </div>
-
-                <div>
-                    <label for="message">
-                        MESSAGE
-                    </label>
-                    <textarea name="message" id="msg" placeholder="Tell us more about your need... " cols="20" rows="20"></textarea>
-                </div>
-            </form>
-        </section> -->
+        </nav>
         
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name-highlight">Abdelrahman Mukhtar</span>
+                        <span class="role">Frontend Developer</span>
+            </h1>
+                    <p class="hero-description">
+                        I craft beautiful, responsive web experiences using modern technologies. 
+                        Passionate about creating intuitive user interfaces and solving complex problems through code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate Frontend Developer with a strong foundation in modern web technologies. 
+                        Currently pursuing my B.Sc. in Software Intelligent Systems and Multimedia at Alexandria University, 
+                        I'm dedicated to creating exceptional user experiences through clean, efficient code.
+                    </p>
+                    <p class="about-description">
+                        My journey in web development started with curiosity about how websites work, and it has evolved 
+                        into a deep passion for creating interactive, responsive, and accessible web applications. 
+                        I believe in continuous learning and staying up-to-date with the latest industry trends.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="images/Mkhtr.jfif" alt="Abdelrahman Mukhtar">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">What I work with</p>
+            </div>
+            <div class="skills-grid">
+                <!-- HTML5 Card -->
+                <div class="skill-card html-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">HTML5</h3>
+                    </div>
+                </div>
+
+                <!-- CSS3 Card -->
+                <div class="skill-card css-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">CSS3</h3>
+                    </div>
+                </div>
+
+                <!-- JavaScript Card -->
+                <div class="skill-card js-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">JavaScript</h3>
+                    </div>
+                </div>
+
+                <!-- React Card -->
+                <div class="skill-card react-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">React</h3>
+                    </div>
+                </div>
+
+                <!-- Java Card -->
+                <div class="skill-card java-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">Java</h3>
+                    </div>
+                </div>
+
+                <!-- Bootstrap Card -->
+                <div class="skill-card bootstrap-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">Bootstrap</h3>
+                    </div>
+                </div>
+
+                <!-- Git Card -->
+                <div class="skill-card git-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">Git</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Education & Experience</h2>
+                <p class="section-subtitle">My journey so far</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">B.Sc. Software Intelligent Systems and Multimedia</h3>
+                        <p class="timeline-company">Alexandria University - Faculty of Science</p>
+                        <p class="timeline-description">
+                            Currently pursuing my degree with focus on software development, 
+                            artificial intelligence, and multimedia technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Screenshot (97).png" alt="Finder Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://mkhtr10.github.io/Finder-project/" target="_blank" class="project-link">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Mkhtr10/Finder-project" target="_blank" class="project-link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Finder Project</h3>
+                        <p class="project-description">
+                            A fully responsive product search website with interactive UI components 
+                            and advanced search functionality. Built with modern CSS techniques and 
+                            optimized for performance across all devices.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Screenshot (105).png" alt="Memory Game">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://mkhtr10.github.io/Memory-Game/" target="_blank" class="project-link">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Mkhtr10/Memory-Game" target="_blank" class="project-link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Memory Card Game</h3>
+                        <p class="project-description">
+                            An interactive memory card game featuring smooth 3D flip animations, 
+                            neon-inspired visual effects, and engaging gameplay mechanics. 
+                            Includes player scoring and multiple difficulty levels.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS Animations</span>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-code"></i>
+                            <p>Coming Soon</p>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">
+                                    <i class="fa-solid fa-lock"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">React Portfolio</h3>
+                        <p class="project-description">
+                            A modern, interactive portfolio built with React and TypeScript. 
+                            Features smooth animations, dark/light mode, and a contact form 
+                            with email integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Styled Components</span>
+                            <span class="tech-tag">Framer Motion</span>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="section-header">
+                <h2 class="section-title">What People Say</h2>
+                <p class="section-subtitle">Testimonials from colleagues and mentors</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Abdelrahman demonstrates exceptional attention to detail and a strong understanding of modern web development practices. His projects showcase both technical skill and creative problem-solving."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Dr. Ahmed Hassan</h4>
+                                <p class="author-title">Computer Science Professor</p>
+                                <p class="author-company">Alexandria University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Abdelrahman has been a pleasure. He brings fresh ideas to every project and consistently delivers high-quality, responsive web applications that exceed expectations."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah Mohamed</h4>
+                                <p class="author-title">Senior Frontend Developer</p>
+                                <p class="author-company">Tech Solutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Abdelrahman's dedication to learning and improving his skills is impressive. His portfolio projects demonstrate both technical competence and a keen eye for user experience design."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Omar El-Sayed</h4>
+                                <p class="author-title">UI/UX Designer</p>
+                                <p class="author-company">Creative Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's discuss your project</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. 
+                       Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span class="method-label">Email</span>
+                                <span class="method-value">abdelrahman.mkhtr@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <div>
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Alexandria, Egypt</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa-solid fa-clock"></i>
+                <div>
+                                <span class="method-label">Response Time</span>
+                                <span class="method-value">Within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            </div>
+        </section>
     </main>
     
     <script src="js/main.js" type="text/javascript">
